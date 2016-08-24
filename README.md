@@ -1,5 +1,5 @@
 # Crosslingual Word Embeddings
-This is the implementation of our EMNLP 2016 paper titled : 
+This is the implementation of our [EMNLP 2016] (emnlp2016.net) paper titled : 
 [Learning CrosslingualWord Embeddings without Bilingual Corpora] (https://arxiv.org/abs/1606.09403)
 
 If you use  this code, please cite the paper 
@@ -16,10 +16,10 @@ If you use  this code, please cite the paper
 }
 ```
 ### Getting started
-The implementation is basically the extension of C version [Word2Vec] (https://code.google.com/archive/p/word2vec/). You just need to do the `make`
+The implementation is basically the extension of the original [Word2Vec] (https://code.google.com/archive/p/word2vec/). To build the model, you just need to do `make`
 
 ### How to run  
-We included the extracted dictionaries from [Panlex] (http://panlex.org/) for several languages including (German, Dutch, Spanish, Italian, Greek, Finish, Japanse, Serbian) in folder `/data/dicts`. We also included a tiny mixed English-Italian monolingual data `/data/mono/en_it.shuf.10k`
+We included the full extracted dictionaries from [Panlex] (http://panlex.org/) for several languages including (German, Dutch, Spanish, Italian, Greek, Finish, Japanse, Serbian) in folder `/data/dicts`. We also included a tiny mixed English-Italian monolingual data `/data/mono/en_it.shuf.10k`
 for demo purposes. The full monolingual data can be downloaded from [Polyglot website] (https://sites.google.com/site/rmyeid/projects/polyglot).
 
 Note that both dictionary and monolingual data are pre-processed with 
