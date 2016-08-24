@@ -15,7 +15,7 @@ If you use  this code, please cite the paper
   publisher = {Association for Computational Linguistics},
 }
 ```
-#### Getting started
+### Getting started
 The implementation is basically the extension of C version Word2Vec. You just need to do the make 
     make
 
@@ -26,11 +26,13 @@ We also included a tiny mixed English-Italian monolingual data for demo purposes
    /data/mono/en_it.shuf.10k
 The following will build the crosslingual word embeddings for English and Italian. 
 ```
-./xlingemb -train data/mono/en_it.shuf.10k -output en.it.word.emb -size 200 -window 48 -iter 15 -negative 25 -sample 0.0001 -alpha 0.025 -cbow 1 -threads 5 -dict data/dicts/en.it.panlex.all.processed -outputn en.it.context.emb -reg 0.01
+./xlingemb -train data/mono/en_it.shuf.10k -output en.it.word.emb -size 200 -window 48 -iter 15 
+-negative 25 -sample 0.0001 -alpha 0.025 -cbow 1 -threads 5 
+-dict data/dicts/en.it.panlex.all.processed -outputn en.it.context.emb -reg 0.01
 ```
 Some options :
 - output: the usual word embeddings 
-- outputn : the context word embeddings which is the final output.
+- <b>outputn</b> : the context word embeddings which is the final output.
 - size, window, iter, negative, sample, alpha, cbow, threads : the same as Word2Vec
 - dict: the dictionary 
 - reg: the regulariser sensitivity for combining word and context embeddings. 
