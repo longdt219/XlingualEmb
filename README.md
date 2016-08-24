@@ -16,14 +16,17 @@ If you use  this code, please cite the paper
 }
 ```
 ### Getting started
-The implementation is basically the extension of C version Word2Vec. You just need to do the make 
-   `make`
+The implementation is basically the extension of C version [Word2Vec] (https://code.google.com/archive/p/word2vec/). You just need to do the `make`
 
 ### How to run  
-We included the extracted dictionaries from Panlex for several languages including (German, Dutch, Spanish, Italian, Greek, Finish, Japanse, Serbian) in folder 
-    `/data/dicts` 
-. We also included a tiny mixed English-Italian monolingual data `/data/mono/en_it.shuf.10k`
-for demo purposes. The following will build the crosslingual word embeddings for English and Italian. 
+We included the extracted dictionaries from [Panlex] (http://panlex.org/) for several languages including (German, Dutch, Spanish, Italian, Greek, Finish, Japanse, Serbian) in folder `/data/dicts`. We also included a tiny mixed English-Italian monolingual data `/data/mono/en_it.shuf.10k`
+for demo purposes. The full monolingual data can be downloaded from [Polyglot website] (https://sites.google.com/site/rmyeid/projects/polyglot).
+
+Note that both dictionary and monolingual data are pre-processed with 
+- lowercased 
+- adding language prefix 
+
+The following will build the crosslingual word embeddings for English and Italian. 
 ```
 ./xlingemb -train data/mono/en_it.shuf.10k -output en.it.word.emb -size 200 -window 48 -iter 15 
 -negative 25 -sample 0.0001 -alpha 0.025 -cbow 1 -threads 5 -dict data/dicts/en.it.panlex.all.processed 
