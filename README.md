@@ -17,23 +17,24 @@ If you use  this code, please cite the paper
 ```
 ### Getting started
 The implementation is basically the extension of C version Word2Vec. You just need to do the make 
-    make
+   `make`
 
 ### How to run  
 We included the extracted dictionaries from Panlex for several languages including (German, Dutch, Spanish, Italian, Greek, Finish, Japanse, Serbian) in folder 
-    /data/dicts 
+    `/data/dicts` 
 We also included a tiny mixed English-Italian monolingual data for demo purposes. 
-   /data/mono/en_it.shuf.10k
+  `/data/mono/en_it.shuf.10k`
 The following will build the crosslingual word embeddings for English and Italian. 
 ```
 ./xlingemb -train data/mono/en_it.shuf.10k -output en.it.word.emb -size 200 -window 48 -iter 15 
--negative 25 -sample 0.0001 -alpha 0.025 -cbow 1 -threads 5 
--dict data/dicts/en.it.panlex.all.processed -outputn en.it.context.emb -reg 0.01
+-negative 25 -sample 0.0001 -alpha 0.025 -cbow 1 -threads 5 -dict data/dicts/en.it.panlex.all.processed 
+-outputn en.it.context.emb -reg 0.01
 ```
 Some options :
-- output: the usual word embeddings 
-- <b>outputn</b> : the context word embeddings which is the final output.
+- train : the training file. 
+- output: the usual word embeddings output file
+- <b>outputn</b> : the context word embeddings file which is the final output.
 - size, window, iter, negative, sample, alpha, cbow, threads : the same as Word2Vec
-- dict: the dictionary 
-- reg: the regulariser sensitivity for combining word and context embeddings. 
+- <b> dict </b>: the dictionary 
+- <b> reg </b> : the regulariser sensitivity for combining word and context embeddings. 
 
