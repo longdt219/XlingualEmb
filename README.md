@@ -22,18 +22,17 @@ The implementation is basically the extension of C version Word2Vec. You just ne
 ### How to run  
 We included the extracted dictionaries from Panlex for several languages including (German, Dutch, Spanish, Italian, Greek, Finish, Japanse, Serbian) in folder 
     `/data/dicts` 
-We also included a tiny mixed English-Italian monolingual data for demo purposes. 
-  `/data/mono/en_it.shuf.10k`
-The following will build the crosslingual word embeddings for English and Italian. 
+. We also included a tiny mixed English-Italian monolingual data `/data/mono/en_it.shuf.10k`
+for demo purposes. The following will build the crosslingual word embeddings for English and Italian. 
 ```
 ./xlingemb -train data/mono/en_it.shuf.10k -output en.it.word.emb -size 200 -window 48 -iter 15 
 -negative 25 -sample 0.0001 -alpha 0.025 -cbow 1 -threads 5 -dict data/dicts/en.it.panlex.all.processed 
 -outputn en.it.context.emb -reg 0.01
 ```
 Some options :
-- train : the training file. 
-- output: the usual word embeddings output file
-- <b>outputn</b> : the context word embeddings file which is the final output.
+- train : the training file which is the combination of English and Italian monolingual data. 
+- output: the usual word embedding output file which is for reference purpose only.  
+- <b>outputn</b> : the context word embedding file which is the <b> final output </b>. 
 - size, window, iter, negative, sample, alpha, cbow, threads : the same as Word2Vec
 - <b> dict </b>: the dictionary 
 - <b> reg </b> : the regulariser sensitivity for combining word and context embeddings. 
