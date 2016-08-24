@@ -1,4 +1,4 @@
-# Speech Translation/Alignment
+# Crosslingual Word Embeddings
 This is the implementation of our EMNLP 2016 paper titled : 
 [Learning CrosslingualWord Embeddings without Bilingual Corpora] (https://arxiv.org/abs/1606.09403)
 
