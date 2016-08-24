@@ -39,4 +39,4 @@ Some options :
 - <b>outputn</b> : the context word embedding file which is the <b> final output </b>. 
 - <b> dict </b>: the bilingual dictionary 
 - <b> reg </b> : the regulariser sensitivity for combining word and context embeddings. 
-
+- run `./xlingemb` without parameters for full list of params. 
