@@ -23,10 +23,10 @@ We included the extracted dictionaries from [Panlex] (http://panlex.org/) for se
 for demo purposes. The full monolingual data can be downloaded from [Polyglot website] (https://sites.google.com/site/rmyeid/projects/polyglot).
 
 Note that both dictionary and monolingual data are pre-processed with 
-- lowercased 
-- adding language prefix 
+- lowercase 
+- add language prefix 
 
-The following will build the crosslingual word embeddings for English and Italian. 
+The following command will build the crosslingual word embeddings for English and Italian. 
 ```
 ./xlingemb -train data/mono/en_it.shuf.10k -output en.it.word.emb -size 200 -window 48 -iter 15 
 -negative 25 -sample 0.0001 -alpha 0.025 -cbow 1 -threads 5 -dict data/dicts/en.it.panlex.all.processed 
@@ -35,8 +35,8 @@ The following will build the crosslingual word embeddings for English and Italia
 Some options :
 - train : the training file which is the combination of English and Italian monolingual data. 
 - output: the usual word embedding output file which is for reference purpose only.  
-- <b>outputn</b> : the context word embedding file which is the <b> final output </b>. 
 - size, window, iter, negative, sample, alpha, cbow, threads : the same as Word2Vec
-- <b> dict </b>: the dictionary 
+- <b>outputn</b> : the context word embedding file which is the <b> final output </b>. 
+- <b> dict </b>: the bilingual dictionary 
 - <b> reg </b> : the regulariser sensitivity for combining word and context embeddings. 
 
