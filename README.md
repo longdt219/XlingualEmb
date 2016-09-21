@@ -34,9 +34,9 @@ The following command will build the crosslingual word embeddings for English an
 ```
 Some options :
 - train : the training file which is the combination of English and Italian monolingual data. 
-- output: the usual word embedding output file which is for reference purpose only.  
+- output: the usual context word embedding output file which is for reference purpose only.
 - size, window, iter, negative, sample, alpha, cbow, threads : the same as Word2Vec
-- <b>outputn</b> : the context word embedding file which is the <b> final output </b>. 
+- <b>outputn</b> : the word embedding file which is the <b> final output </b>. 
 - <b> dict </b>: the bilingual dictionary 
 - <b> reg </b> : the regulariser sensitivity for combining word and context embeddings. 
 - run `./xlingemb` without parameters for full list of params. 
